@@ -15,7 +15,15 @@ app.use(express.json());
 
 // Routes
 // =====================================
-// routes code here
+app.get("/tables", function(req, res) {
+  res.sendFile(path.join(__dirname, "tables.html"));
+});
+app.get("/reserve", function(req, res) {
+  res.sendFile(path.join(__dirname, "reserve.html"));
+});
+app.get("/", function(req, res) {
+  res.sendFile(path.join(__dirname, "home.html"));
+});
 
 // Starts the server to begin listening
 // =====================================
