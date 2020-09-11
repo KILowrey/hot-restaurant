@@ -13,7 +13,26 @@ const PORT = 8000
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
-// Routes
+// Reservations (DATA)
+// =====================================
+let reservations = [];
+
+// Display all Reservations
+// =====================================
+app.get("/api/reservations", function(req, res) {
+  return res.json(reservations);
+});
+
+// Create New Reservations
+// =====================================
+app.post("/api/reservations", function(req, res) {
+  let newReservation = req.body;
+  console.log(newReservation);
+  reservations.push(newReservation);
+  res.json(newReservation);
+});
+
+// Basic Routes
 // =====================================
 app.get("/tables", function(req, res) {
   res.sendFile(path.join(__dirname, "tables.html"));
