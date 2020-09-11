@@ -35,13 +35,13 @@ app.post("/api/reservations", function(req, res) {
 // Basic Routes
 // =====================================
 app.get("/tables", function(req, res) {
-  res.sendFile(path.join(__dirname, "tables.html"));
+  res.sendFile(path.join(__dirname, "./pages/tables.html"));
 });
 app.get("/reserve", function(req, res) {
-  res.sendFile(path.join(__dirname, "reserve.html"));
+  res.sendFile(path.join(__dirname, "./pages/reserve.html"));
 });
 app.get("/", function(req, res) {
-  res.sendFile(path.join(__dirname, "home.html"));
+  res.sendFile(path.join(__dirname, "./pages/home.html"));
 });
 
 // Starts the server to begin listening
