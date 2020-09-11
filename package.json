@@ -3,6 +3,12 @@
   "version": "1.0.0",
   "description": "",
   "main": "server.js",
+  "dependencies": {
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.4"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js"
@@ -16,8 +22,5 @@
   "bugs": {
     "url": "https://github.com/KILowrey/hot-restaurant/issues"
   },
-  "homepage": "https://github.com/KILowrey/hot-restaurant#readme",
-  "dependencies": {
-    "express": "^4.17.1"
-  }
+  "homepage": "https://github.com/KILowrey/hot-restaurant#readme"
 }
